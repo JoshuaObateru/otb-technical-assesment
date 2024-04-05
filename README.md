@@ -1,3 +1,28 @@
+# Technical Assesment Docs
+
+## Important Steps
+
+### Setup Project
+
+- Create project and add storybook from the project directory in the terminal
+
+```zsh
+npx create-react-app otb-tchnical-assesment --template typescript
+npx storybook@latest init
+```
+
+### Clone Project
+
+### Run Storybook
+
+```zsh
+npm run storybook
+```
+
+### Run Project
+
+### Test Project
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
