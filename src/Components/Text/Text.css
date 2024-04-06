@@ -1,0 +1,39 @@
+.text-primary {
+    color: var(--app-dark);
+}
+.text-secondary {
+    color: var(--app-blue);
+}
+.text-grey {
+ color: var(--app-grey);
+}
+
+.text-header {
+    /* font-weight:600 ; */
+    /* font-size: larger; */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.text-subHeader {
+    /* opacity: .5; */
+    /* color: #a2a0a0; */
+    /* font-weight: 500;
+    font-size: large; */
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: large;
+}
+
+.text-bolder{
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+.text-default {
+    /* font-weight: 400; */
+   margin-top: .2rem;
+   margin-bottom: .2rem;
+   /* line-height: 0%; */
+    
+}

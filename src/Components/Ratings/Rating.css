@@ -1,0 +1,10 @@
+.rating-yellow {
+    color: var(--app-yellow);
+}
+.rating-style {
+    display: flex;
+}
+.star-style{
+    font-size: x-large;
+    padding-right: 1%;
+}

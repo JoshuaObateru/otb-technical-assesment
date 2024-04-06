@@ -1,0 +1,33 @@
+.card-background {
+    background-color: var(--bg-white);
+}
+.card-top {
+    display: flex;
+    position: relative;
+    /* height: max-content; */
+    /* min-height: 10vh; */
+}
+.card-top img {
+    width: 65%
+}
+.card-top-right {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+   width: 40%;
+   justify-content: space-between;
+}
+.card-align-expansion-tile {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.card-top-right-text-info{
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+   justify-content: center;
+}
+.card-expanded-component{
+    padding: 2%;
+}
