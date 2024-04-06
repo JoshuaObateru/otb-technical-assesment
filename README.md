@@ -9,9 +9,15 @@
 ```zsh
 npx create-react-app otb-tchnical-assesment --template typescript
 npx storybook@latest init
+npm install react-icons --save
 ```
 
 ### Clone Project
+
+```zsh
+git clone https://github.com/JoshuaObateru/otb-technical-assesment.git
+npm install
+```
 
 ### Run Storybook
 
@@ -19,19 +25,20 @@ npx storybook@latest init
 npm run storybook
 ```
 
+- Add index.css to .storybook/preview to enable storybook to access the css variables
+- Add addon "@storybook/addon-docs" to .storybook/main to enable autodocs
+
+### Access react Icons Homepage
+
+- https://react-icons.github.io/react-icons/
+
 ### Run Project
-
-### Test Project
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+```zsh
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -39,10 +46,20 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### Test Project
+
+```zsh
+npm test
+```
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
 
 ### `npm run build`
 
