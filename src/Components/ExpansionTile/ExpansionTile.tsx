@@ -4,6 +4,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import Text from "../Text/Text";
+import './ExpansionTile.css'
 
 interface ExpansionTileProps {
     onClick: () => void
@@ -12,8 +13,10 @@ interface ExpansionTileProps {
 }
 
 const ExpansionTile = ({ onClick, isExpanded = false }: ExpansionTileProps) => {
+    const expansionTileBackground = 'expansion-tile-background'
+    const expansionTileIcon = 'expansion-tile-icon'
     return (
-        <button onClick={() => onClick()} style={{ backgroundColor: "white", padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderWidth: 0, }}><Text color='secondary'><strong>{isExpanded === true ? 'Read less' : 'Read more'}</strong> about this hotel </Text>{isExpanded === true ? <IoIosArrowDown style={{ color: 'blue', fontWeight: 'bold' }} /> : <IoIosArrowForward style={{ color: 'blue', fontWeight: 'bold' }} />} </button>
+        <div onClick={() => onClick()} className={`${expansionTileBackground}`} ><Text color='secondary'><strong>{isExpanded === true ? 'Read less' : 'Read more'}</strong> about this hotel </Text> <strong>{isExpanded === true ? <IoIosArrowDown className={`${expansionTileIcon}`} /> : <IoIosArrowForward className={`${expansionTileIcon}`} />}</strong> </div>
     )
 }
 

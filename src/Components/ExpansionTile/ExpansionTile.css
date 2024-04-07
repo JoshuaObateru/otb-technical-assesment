@@ -1,0 +1,13 @@
+.expansion-tile-background {
+    background-color: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+}
+.expansion-tile-icon {
+    color: var(--app-blue);
+    font-weight: 900;
+    font-size: larger;
+}

@@ -1,4 +1,4 @@
-interface TravelData {
+export interface TravelData {
   title: string;
   location: string;
   departingFrom: string;

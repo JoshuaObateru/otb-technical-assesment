@@ -6,15 +6,19 @@ import Rating from '../Ratings/Rating';
 import Button from '../Button/Button';
 import ExpansionTile from '../ExpansionTile/ExpansionTile';
 import { useState } from 'react';
+import { TravelData, travelData } from '../../Data/TravelData';
 
-interface CardProp {
+interface CardProp extends TravelData {
     imageSrc: any;
     expanded: boolean
 }
 
-const Card = ({ imageSrc = image1, expanded = false }: CardProp) => {
+const Card = ({ imageSrc = image1, expanded = false, }: CardProp) => {
     const [tileExpanded, setTileExpanded] = useState(expanded)
 
+    const toggleTileExpanded = () => {
+        setTileExpanded(!tileExpanded)
+    }
     const cardBackground = 'card-background';
     const cardTop = 'card-top';
     const cardTopRight = 'card-top-right';
@@ -25,7 +29,7 @@ const Card = ({ imageSrc = image1, expanded = false }: CardProp) => {
         <div className={`${cardBackground}`}>
             <div className={`${cardTop}`}>
                 <img src={imageSrc} alt='Hotel' />
-                <div className={`${cardAlignExpansionTile}`}><ExpansionTile isExpanded={expanded} onClick={() => { }} /> </div>
+                <div className={`${cardAlignExpansionTile}`}><ExpansionTile isExpanded={tileExpanded} onClick={() => toggleTileExpanded()} /> </div>
                 <div className={`${cardTopRight}`}>
                     <Text color='secondary' type='header'>Iberostar Grand Salome</Text>
                     <Text type='subHeader' color='grey'>Costa Adeje, Tenerife</Text>
@@ -42,7 +46,7 @@ const Card = ({ imageSrc = image1, expanded = false }: CardProp) => {
             </div>
             {/* This contains the expanded text */}
             {/* Write test to check if hidden when not expanded */}
-            {expanded === true && <div className={`${cardBackground} ${cardExpandedComponent}`}></div>}
+            {tileExpanded === true && <div className={`${cardBackground} ${cardExpandedComponent}`}><Text color='secondary' type='subHeader'>Overview</Text><br /> <Text>{travelData[0].overview}</Text></div>}
         </div>
     )
 }
