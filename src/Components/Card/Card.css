@@ -1,9 +1,14 @@
 .card-background {
     background-color: var(--bg-white);
+    min-width: max-content;
+    width: 100%;
 }
 .card-top {
     display: flex;
     position: relative;
+    
+    min-height: max-content;
+    /* height: 100%; */
     /* height: max-content; */
     /* min-height: 10vh; */
 }
@@ -30,4 +35,6 @@
 }
 .card-expanded-component{
     padding: 2%;
+    /* display: flex;
+    flex-direction: column; */
 }
