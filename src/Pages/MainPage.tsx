@@ -42,11 +42,11 @@ const MainPage = () => {
     const cardSpacing = 'card-spacing'
     return (
         <div className={`${pageStyle}`}>
-            <div className={`${menuParentStyle}`}>
-                {menuOptions.map((menuOption, index) => <><OptionComponent onClick={() => sortItems(menuOption.label)} isSelected={current === menuOption.label ? true : false} label={menuOption.label} showLine={index !== (menuOptions.length - 1)}>{menuOption.icon}</OptionComponent></>)}
+            <div className={`${menuParentStyle}`} >
+                {menuOptions.map((menuOption, index) => <OptionComponent key={menuOption.label + index} onClick={() => sortItems(menuOption.label)} isSelected={current === menuOption.label ? true : false} label={menuOption.label} showLine={index !== (menuOptions.length - 1)}>{menuOption.icon}</OptionComponent>)}
             </div>
-            <div className={`${cardParentStyle}`}>
-                {sortedTravelData.map((tvd, index) => <div className={`${cardSpacing}`}><Card expanded={false} key={tvd.date + index} data={tvd} /></div>)}
+            <div className={`${cardParentStyle}`} data-testid={`list-elements`}>
+                {sortedTravelData.map((tvd, index) => <div key={tvd.date + index} className={`${cardSpacing}`}><Card expanded={false} data={tvd} /></div>)}
             </div>
         </div>
 

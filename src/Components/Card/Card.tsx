@@ -37,7 +37,7 @@ const Card = ({ expanded = false, data }: CardProp) => {
                     <Text type='subHeader' color='grey'>{data.location}</Text>
                     <Rating noOfStars={data.rating} />
                     <div className={`${cardTopRightTextInfo}`}>
-                        <Text >{data.adults && data.adults > 0 && <strong> {data.adults} </strong>} {data.adults && data.adults > 1 ? 'Adults' : data.adults === 1 ? 'Adult' : ''}{data.children && data.infants ? ',' : data.children && !data.infants ? ' &' : ''}
+                        <Text data-testid='text-render'>{data.adults && data.adults > 0 && <strong> {data.adults} </strong>} {data.adults && data.adults > 1 ? 'Adults' : data.adults === 1 ? 'Adult' : ''}{data.children && data.infants ? ',' : data.children && !data.infants ? ' &' : ''}
 
                             {data.children && data.children > 0 && <strong> {data.children} </strong>} {data.children && data.children > 1 ? 'Children' : data.children === 1 ? 'Child' : ''}{data.infants ? ' &' : ''}
 

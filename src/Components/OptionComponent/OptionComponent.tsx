@@ -19,7 +19,7 @@ const OptionComponent = ({ isSelected = false, label, onClick, showLine = false,
     const showBottomBorder = showLine === true ? 'show-bottom-border' : 'hide-bottom-border'
     const optionComponentBackground = isSelected === false ? 'option-component-unselected' : 'option-component-selected'
     return (
-        <div onClick={() => { onClick() }} className={`${optionComponentStyle} ${optionComponentBackground} ${showBottomBorder}`}>
+        <div data-testid={`options-render`} onClick={() => { onClick() }} className={`${optionComponentStyle} ${optionComponentBackground} ${showBottomBorder}`}>
             <Text color={isSelected === true ? 'white' : 'secondary'}>sort {label !== 'alphabetically' ? 'by' : ''} <strong>{label}</strong></Text>
             <strong>{children}</strong>
         </div>
