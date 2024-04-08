@@ -1,10 +1,11 @@
 .expansion-tile-background {
     background-color: var(--bg-white);
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     padding: 1rem;
     width: 100%;
+    cursor: pointer;
 }
 .expansion-tile-icon {
     color: var(--app-blue);

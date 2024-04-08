@@ -1,0 +1,28 @@
+.option-component-style{
+    padding: 1rem;
+    display: flex;
+    /* align-items: center; */
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.show-bottom-border{
+    border-bottom: 2px solid var(--app-blue);
+}
+.hide-bottom-border {
+    border-bottom: none;
+}
+
+.option-component-unselected{
+    background-color: var(--bg-white);
+    color: var(--app-blue);
+}
+.option-component-unselected:hover {
+    background-color: aliceblue;
+    color: var(--app-blue);
+}
+
+.option-component-selected{
+    background-color: var(--app-blue);
+    color: var(--bg-white);
+}

@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Card from './Card'
+import { travelData } from '../../Data/TravelData';
 
 const meta: Meta<typeof Card> = {
     title: 'Components/Card',
@@ -12,11 +13,14 @@ export default meta;
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-    args: {}
+    args: {
+        data: travelData[0]
+    }
 }
 
 export const Expanded: Story = {
     args: {
-        expanded: true
+        expanded: true,
+        data: travelData[1]
     }
 }

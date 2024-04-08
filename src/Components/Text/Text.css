@@ -7,12 +7,16 @@
 .text-grey {
  color: var(--app-grey);
 }
+.text-white {
+    color: var(--bg-white)
+}
 
 .text-header {
     /* font-weight:600 ; */
     /* font-size: larger; */
     margin-top: 0;
     margin-bottom: 0;
+    text-align: start;
 }
 .text-subHeader {
     /* opacity: .5; */
@@ -22,18 +26,37 @@
     margin-top: 0;
     margin-bottom: 0;
     font-size: large;
+    text-align: start;
 }
 
 .text-bolder{
     font-weight: bolder;
     font-size: xx-large;
-    margin-top: .2rem;
-    margin-bottom: .2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
 }
 .text-default {
     /* font-weight: 400; */
-   margin-top: .2rem;
-   margin-bottom: .2rem;
-   /* line-height: 0%; */
-    
+   margin-top: 0;
+   margin-bottom: 0;
+    vertical-align: middle;
+    text-align: start;
 }
+
+
+
+@media only screen and (max-width: 1200px) {
+    .text-default{
+        font-size: smaller;
+    }
+    .text-bolder {
+        font-size: large;
+    }
+    .text-subHeader {
+        font-size: small;
+    }
+    .text-header {
+        font-size: medium;
+    }
+ }

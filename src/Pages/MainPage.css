@@ -1,0 +1,19 @@
+.page-style{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    justify-content: space-evenly;
+    background: linear-gradient(to bottom, #07b6e9, #07b6e9, var(--bg-white));
+}
+.menu-parent-style{
+    width: 15%;
+}
+.card-parent-style{
+    width: 60%;
+}
+
+.card-spacing{
+    margin-bottom: 2rem;
+}
