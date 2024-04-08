@@ -34,13 +34,13 @@ const Rating = ({ noOfStars = 0, ...props }: RatingProps) => {
 
         }
         implementNumberOfRatings()
-    }, [noOfStars, stars]);
+    }, [noOfStars]);
     const ratingColor = 'rating-yellow'
     const ratingStyle = 'rating-style'
     const starStyle = 'star-style'
     return (
-        <div {...props} className={`${ratingStyle}`}>
-            {stars.map((star) => <FaStar key={star} className={`${ratingColor} ${starStyle}`} />)}
+        <div {...props} className={`${ratingStyle}`} >
+            {stars.map((star) => <FaStar key={star} className={`${ratingColor} ${starStyle}`} data-testid='ratings-render' />)}
 
         </div>
     )
