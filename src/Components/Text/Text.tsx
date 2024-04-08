@@ -7,12 +7,12 @@ export interface TextProps {
     /** This determines the look and size of the text */
     type?: 'default' | 'subHeader' | 'header' | 'bolder';
     /** This determines the color for the text */
-    color?: 'primary' | 'secondary' | 'grey'
+    color?: 'primary' | 'secondary' | 'grey' | 'white'
 }
 
 /** This is a dynamic reusable text component that covers all the texts used on a page*/
 const Text = ({ children, type = 'default', color = 'primary', ...props }: TextProps) => {
-    const colorClasses = color === 'grey' ? 'text-grey' : color === 'secondary' ? 'text-secondary' : 'text-primary';
+    const colorClasses = color === 'grey' ? 'text-grey' : color === 'secondary' ? 'text-secondary' : color === 'white' ? 'text-white' : 'text-primary';
     const typeClasses = type === 'bolder' ? 'text-bolder' : type === 'subHeader' ? 'text-subHeader' : type === 'header' ? 'text-header' : 'text-default';
 
     return (
